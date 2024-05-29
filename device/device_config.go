@@ -5,11 +5,12 @@ import (
 )
 
 type config struct {
-	ioType    v4l2.IOType
-	pixFormat v4l2.PixFormat
-	bufSize   uint32
-	fps       uint32
-	bufType   uint32
+	ioType      v4l2.IOType
+	pixFormat   v4l2.PixFormat
+	bufSize     uint32
+	fps         uint32
+	bufType     uint32
+	captureMode uint32
 }
 
 type Option func(*config)
@@ -35,6 +36,12 @@ func WithBufferSize(size uint32) Option {
 func WithFPS(fps uint32) Option {
 	return func(o *config) {
 		o.fps = fps
+	}
+}
+
+func WithCaptureMode(captureMode uint32) Option {
+	return func(o *config) {
+		o.captureMode = captureMode
 	}
 }
 
