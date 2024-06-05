@@ -27,6 +27,7 @@ var (
 	PixelFmtMPEG  FourCCType = C.V4L2_PIX_FMT_MPEG
 	PixelFmtH264  FourCCType = C.V4L2_PIX_FMT_H264
 	PixelFmtMPEG4 FourCCType = C.V4L2_PIX_FMT_MPEG4
+	PixelFmtNV12  FourCCType = C.V4L2_PIX_FMT_NV12
 )
 
 // PixelFormats provides a map of FourCCType encoding description
